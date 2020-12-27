@@ -1,154 +1,117 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-*{
+*,
+*::after,
+*::before {
   padding: 0px;
   margin: 0px;
-  box-sizing: border-box;
-}
+  box-sizing: inherit; }
 
-body{
+body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
   padding: 30px;
-}
-.header{
-  background-image: linear-gradient(rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)),
-    url(../img/hero.jpg);
+  box-sizing: border-box; }
+
+.header {
+  background-image: linear-gradient(rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   height: 95vh;
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0,100% 75vh, 0 100%);
-  position: relative;
-}
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
 
-.logo-box{
+.logo-box {
   position: absolute;
   top: 40px;
-  left: 40px;
-}
-.logo{
-  height: 35px;
-}
+  left: 40px; }
 
-.heading-primary{
-  color: #ffffff;
+.logo {
+  height: 35px; }
+
+.heading-primary {
+  color: #fff;
   text-transform: uppercase;
   font-weight: 400;
-  backface-visibility: hidden;
+  backface-visibility: hidden; }
 
-}
-
-.heading-primary-main{
+.heading-primary-main {
   display: block;
   font-size: 50px;
   letter-spacing: 35px;
   animation-name: leftMove;
   animation-duration: 3s;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-out; }
 
-
-}
-.heading-primary-sub{
+.heading-primary-sub {
   display: block;
   font-size: 20px;
   letter-spacing: 15px;
   animation-name: rightMove;
   animation-duration: 3s;
   animation-timing-function: ease-out;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
-.box-text{
-
+.box-text {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-
-}
+  text-align: center; }
 
 @keyframes leftMove {
-  0%{
+  0% {
     opacity: 0;
-    transform: translateX(-100px);
-  }
-
-  80%{
+    transform: translateX(-100px); }
+  80% {
     opacity: 1;
-    transform: translateX(20px);
-  }
-
-  100%{
+    transform: translateX(20px); }
+  100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes rightMove {
-  0%{
+  0% {
     opacity: 0;
-    transform: translateX(100px);
-  }
-
-  80%{
+    transform: translateX(100px); }
+  80% {
     opacity: 1;
-    transform: translateX(-20px);
-  }
-
-  100%{
+    transform: translateX(-20px); }
+  100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
+
 @keyframes bottomMove {
-  0%{
+  0% {
     opacity: 0;
-    transform: translateY(100px);
-  }
-
-
-  100%{
+    transform: translateY(100px); }
+  100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
-.btn:link, .btn:visited{
+.btn:link, .btn:visited {
   display: inline-block;
   border-radius: 100px;
   text-decoration: none;
   text-transform: uppercase;
   padding: 15px 40px;
   transition: all .2s;
-  position: relative;
+  position: relative; }
 
-}
-
-.btn:hover{
+.btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px grey;
-}
-.btn:active{
+  box-shadow: 0 10px 20px grey; }
+
+.btn:active {
   transform: translateY(-1px);
-  box-shadow: 0px 5px 10px pink;
-}
+  box-shadow: 0px 5px 10px pink; }
 
-.btn-white{
-  background: white;
-  color: grey;
-}
+.btn-white {
+  background: #fff;
+  color: #777; }
 
-.btn::after{
+.btn::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -156,22 +119,18 @@ body{
   display: inline-block;
   position: absolute;
   border-radius: 100px;
-  top:0;
+  top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s;
+  transition: all .4s; }
 
-}
-.btn-white::after{
-    background-color: white;
-}
+.btn-white::after {
+  background-color: #fff; }
 
-.btn:hover::after{
+.btn:hover::after {
   transform: scale(1.5);
-  opacity: 0;
-}
+  opacity: 0; }
 
-.btn-animation{
+.btn-animation {
   animation: bottomMove .5s ease-out .75s;
-  animation-fill-mode: backwards;
-}
+  animation-fill-mode: backwards; }
